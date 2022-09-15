@@ -1,0 +1,75 @@
+https://gist.github.com/dideler/85de4d64f66c1966788c1b2304b9caf1
+Команда для отправки сообщения от Бота в чат с указанным id
+curl -X POST \
+     -H 'Content-Type: application/json' \
+     -d '{"chat_id": "123456789", "text": "This is a test from curl", "disable_notification": true}' \
+     https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage
+
+curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "-1001634289192", "text": "This is a test from curl", "disable_notification": false}' https://api.telegram.org/botXXX/sendMessage
+
+
+https://github.com/qa-guru/allure-notifications
+Команда для запуска:
+    java \
+    "-DconfigFile=${PATH_TO_FILE}" \
+    -jar allure-notifications-4.1.jar
+
+    java \
+    "-DconfigFile=notifications/telegram.json" \
+    -jar allure-notifications-4.1.jar
+
+    java "-DconfigFile=notifications/telegram.json" -jar allure-notifications-4.1.jar
+    java "-DconfigFile=notifications/slack.json" -jar allure-notifications-4.1.jar
+
+Файл-конфиг
+{
+  "base": {
+    "logo": "",
+    "project": "",
+    "environment": "",
+    "comment": "",
+    "reportLink": "",
+    "language": "ru",
+    "messenger": "telegram",
+    "allureFolder": "",
+    "enableChart": false
+  },
+  "telegram": {
+    "token": "",
+    "chat": "",
+    "replyTo": ""
+  },
+  "slack": {
+    "token": "",
+    "chat": "",
+    "replyTo": ""
+  },
+  "mattermost": {
+    "url": "",
+    "token": "",
+    "chat": ""
+  },
+  "skype": {
+    "appId": "",
+    "appSecret": "",
+    "serviceUrl": "",
+    "conversationId": "",
+    "botId": "",
+    "botName": ""
+  },
+  "mail": {
+    "host": "",
+    "port": "",
+    "username": "",
+    "password": "",
+    "enableSSL": false,
+    "from": "",
+    "recipient": ""
+  },
+  "proxy": {
+    "host": "",
+    "port": 0,
+    "username": "",
+    "password": ""
+  }
+}
