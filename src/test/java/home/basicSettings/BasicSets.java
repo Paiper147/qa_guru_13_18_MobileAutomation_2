@@ -4,11 +4,9 @@ import home.drivers.BrowserstackMobileDriverHome;
 import home.drivers.EmulatorMobileDriverHome;
 import home.drivers.LocalMobileDriverHome;
 
-import static home.tests.TestBaseHome.testEnvironment;
-
 public class BasicSets {
 
-    public static String getIdPrefix() {
+    public static String getIdPrefix(String testEnvironment) {
         String idPrefix = null;
 
         if (testEnvironment == null) {

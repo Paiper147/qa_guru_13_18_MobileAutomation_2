@@ -13,6 +13,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import static home.basicSettings.BasicSets.getIdPrefix;
+import static home.tests.TestBaseHome.testEnvironment;
 import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class EmulatorMobileDriverHome implements WebDriverProvider {
@@ -38,7 +39,7 @@ public class EmulatorMobileDriverHome implements WebDriverProvider {
 //        ДО "/" написан setAppPackage
 //        ПОСЛЕ "/" написан setAppActivity
         options.setApp(app.getAbsolutePath());
-        options.setAppPackage(getIdPrefix());
+        options.setAppPackage(getIdPrefix(testEnvironment));
         options.setAppActivity("org.wikipedia.main.MainActivity");
 
         return new AndroidDriver(getAppiumServerUrl(), options);

@@ -11,10 +11,12 @@ import org.junit.jupiter.api.BeforeEach;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static home.basicSettings.BasicSets.getBrowser;
+import static home.basicSettings.BasicSets.getIdPrefix;
 import static io.qameta.allure.Allure.step;
 
 public class TestBaseHome {
-    public static String testEnvironment = System.getProperty("testEnv");
+    public static String testEnvironment = System.getProperty("testEnv","Local");
+    String idPrefix = getIdPrefix(testEnvironment);
 
     @BeforeAll
     public static void setup() throws Exception {

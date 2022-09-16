@@ -12,7 +12,6 @@ import static io.qameta.allure.Allure.step;
 
 @Tag("testHome")
 public class AndroidHomeTests extends TestBaseHome {
-    String idPrefix = getIdPrefix();
 
     @Test
     void searchTest() {
@@ -50,5 +49,33 @@ public class AndroidHomeTests extends TestBaseHome {
         step("Verify content found", () ->
                 $$(AppiumBy.id(idPrefix + ":id/page_list_item_title"))
                         .shouldHave(CollectionCondition.sizeGreaterThan(0)));
+    }
+
+    @Test
+    void onboardingTest(){
+        step("Check first screen", () -> {
+            $(AppiumBy.id(idPrefix + ":id/primaryTextView"))
+                    .shouldHave(Condition.text("The Free Encyclopedia …in over 300 languages"));
+        });
+
+        step("Check second screen", () -> {
+            $(AppiumBy.id(idPrefix + ":id/fragment_onboarding_forward_button")).click();
+            $(AppiumBy.id(idPrefix + ":id/primaryTextView"))
+                    .shouldHave(Condition.text("New ways to explore"));
+        });
+
+        step("Check third screen", () -> {
+            $(AppiumBy.id(idPrefix + ":id/fragment_onboarding_forward_button")).click();
+            $(AppiumBy.id(idPrefix + ":id/primaryTextView"))
+                    .shouldHave(Condition.text("Reading lists with sync"));
+        });
+
+        step("Check fourth screen", () -> {
+            $(AppiumBy.id(idPrefix + ":id/fragment_onboarding_forward_button")).click();
+            $(AppiumBy.id(idPrefix + ":id/primaryTextView"))
+                    .shouldHave(Condition.text("Send anonymous data"));
+            $(AppiumBy.id(idPrefix + ":id/switchView"))
+                    .shouldHave(Condition.attribute("checked","true"));
+        });
     }
 }
