@@ -13,7 +13,7 @@ public class AndroidBrowserstackSearchTests extends TestBaseBrowserstackQaGuru {
 
     @Test
     void searchTest() {
-        back();
+//        back();
 //        switchTo().alert().accept();
         step("Type search", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/search_container")).click();
@@ -28,7 +28,7 @@ public class AndroidBrowserstackSearchTests extends TestBaseBrowserstackQaGuru {
 
     @Test
     void searchWithByTextTest() {
-        back();
+//        back();
         step("Type search", () -> {
             $(AppiumBy.accessibilityId("Search Wikipedia")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text"))
