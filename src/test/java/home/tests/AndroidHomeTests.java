@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.*;
-import static home.basicSettings.BasicSets.getIdPrefix;
 import static io.qameta.allure.Allure.step;
 
 @Tag("testHome")

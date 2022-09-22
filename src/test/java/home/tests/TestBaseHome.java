@@ -10,8 +10,8 @@ import org.junit.jupiter.api.BeforeEach;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
-import static home.basicSettings.BasicSets.getBrowser;
-import static home.basicSettings.BasicSets.getIdPrefix;
+import static home.basicsettings.BasicSets.getBrowser;
+import static home.basicsettings.BasicSets.getIdPrefix;
 import static io.qameta.allure.Allure.step;
 
 public class TestBaseHome {

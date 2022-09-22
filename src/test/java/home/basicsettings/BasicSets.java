@@ -1,4 +1,4 @@
-package home.basicSettings;
+package home.basicsettings;
 
 import home.drivers.BrowserstackMobileDriverHome;
 import home.drivers.EmulatorMobileDriverHome;

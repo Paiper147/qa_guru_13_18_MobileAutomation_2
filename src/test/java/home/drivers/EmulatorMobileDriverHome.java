@@ -12,7 +12,7 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import static home.basicSettings.BasicSets.getIdPrefix;
+import static home.basicsettings.BasicSets.getIdPrefix;
 import static home.tests.TestBaseHome.testEnvironment;
 import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
